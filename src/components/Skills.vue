@@ -1,14 +1,25 @@
 <template>
   <div class="hello">
-    Skills
+    {{name }}
+    <br><br>
+
+    <!--We can use javascript expression within string interpretors -->
+    {{ btnState ? 'The button is disabled' : 'The button is active'}}
+
+    <!--Interpolation on attributes start-->
+    <button v-on:click= "changeName" v-bind:disabled = "btnState">Change Name</button>
+    <!--Interpolation on attributes end-->
   </div>
 </template>
-
+ 
 <script>
 export default {
   name: 'Skills',
-  props: {
-   
+  data () {
+   return {
+     name: 'VueSkillzzzz',
+     btnState: true
+   }
   }
 }
 </script>

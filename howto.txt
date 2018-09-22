@@ -29,3 +29,26 @@ How to import other Components
             }
         }
 Note: .vue represents single file component. Components have there home inside src/components
+
+
+3. Vue templating 
+
+Vue templating : understanding Vue interpolation and vue directives. 
+
+- The most basic form of vue interpolation is called text interpolation. 
+- It is simply the process of displaying the text defined in your component logic. 
+
+    Vue interpolation braces {{ }} : 
+    - to show values of proptery in template section we need Mustaches (two swiggly braces) or interpolation braces. 
+    - within those we put in name of the property. 
+
+Interpolation in html attributes  
+    - You can't use {{ }} within attributes. 
+
+    v-on : is a vue directive. 
+
+What is vue directives? 
+
+A vue directive is a vue specific attribute that is prefixed by a v- ,each serve a different purpose. 
+
+eg: v-for : used for looping through list like array or array of objects 
