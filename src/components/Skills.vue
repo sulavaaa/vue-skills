@@ -1,14 +1,13 @@
 <template>
   <div class="hello">
-    {{name }}
-    <br><br>
+    <div class="holder">
+      <ul>
+        <li v-for="(data,index) in skills" :key ='index'>{{index+1}}. {{data.skill}}</li>
+      </ul>
 
-    <!--We can use javascript expression within string interpretors -->
-    {{ btnState ? 'The button is disabled' : 'The button is active'}}
-
-    <!--Interpolation on attributes start-->
-    <button v-on:click= "changeName" v-bind:disabled = "btnState">Change Name</button>
-    <!--Interpolation on attributes end-->
+      <p v-if="skills.lenght >= 1">You have more than 1 skills</p>
+      <p v-else>You have less than or equal to 1 skill. </p>
+    </div>
   </div>
 </template>
  
@@ -17,8 +16,10 @@ export default {
   name: 'Skills',
   data () {
    return {
-     name: 'VueSkillzzzz',
-     btnState: true
+     skills: [
+       {"skill":"Vue.js"},
+       {"skill":"Frontend Developer"}
+     ]
    }
   }
 }
