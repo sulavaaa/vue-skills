@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    {{name }}
+    <h1 v-once>{{name}}</h1>
     <br><br>
 
     <!--We can use javascript expression within string interpretors -->
