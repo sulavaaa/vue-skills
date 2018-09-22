@@ -1,1 +1,31 @@
-npm run serve
+to create a vue proj: vue create <nameofproj>
+
+to run: 
+a. cd to <nameofproj>
+b. npm run serve
+
+Lets try to understand Components in vue
+++++++++++++++++++++++++++++++++++++++++
+Eg: lets look at App.vue inside src 
+
+It has three main sections 
+a. template
+    html, vue directives and vue component wrappers go inside there
+
+b. script
+    logic of app resides
+c. style 
+    css is place here. 
+
+How to import other Components
++++++++++++++++++++++++++++++++++
+    a. First we reference the name of the component as a custom element in template section
+    b. In script section we use keyword import <nameoftheComponent> from '<pathoftheComponent>'
+    c. also in the same section inside export default {} we reference component by its name
+        export default {
+            name: 'app',
+            Components: {
+                HelloWorld
+            }
+        }
+Note: .vue represents single file component. Components have there home inside src/components
